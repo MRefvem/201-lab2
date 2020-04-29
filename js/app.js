@@ -56,14 +56,14 @@ if(philosphy.toLowerCase() === 'yes'){
   prompt('Please answer with a yes or no');
 }
 
-// question 5 Tiger King?
+// question 5 Play an Instrument?
 
-var watchedTigerKing = prompt('Did you watch Tiger King on Netflix?');
+var playInstrument = prompt('Do you play any musical instruments?');
 
-if(watchedTigerKing.toLowerCase() === 'yes'){
-  alert('That was a crazy show! Wasn\'t it?');
-} else if(watchedTigerKing.toLowerCase() === 'no'){
-  alert('You gotta see it!');
+if(playInstrument.toLowerCase() === 'yes'){
+  alert('That\'s so cool! I\'ve played the piano for 25 years.);
+} else if(playInstrument.toLowerCase() === 'no'){
+  alert('You\'re never too old to start learning!');
 } else {
   prompt('Please answer with a yes or no');
 }
@@ -73,6 +73,9 @@ alert('Thank you so much for answering the questions ' + userName + '! It was ni
 // question 6 Number guessing game
 // Guess a number between 1 and 20 (answer is 12)
 
-var correctNumber = 12
+var correctAnswer = 12
+for(var i = 0; i < 4; i = i + 1){
+  var numberGuess = prompt('Please')
+}
 
 //question 7
