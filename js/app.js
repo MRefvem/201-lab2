@@ -69,3 +69,10 @@ if(watchedTigerKing.toLowerCase() === 'yes'){
 }
 
 alert('Thank you so much for answering the questions ' + userName + '! It was nice to meet you. Continue now to learn a little bit about me on the rest of the site.');
+
+// question 6 Number guessing game
+// Guess a number between 1 and 20 (answer is 12)
+
+var correctNumber = 12
+
+//question 7
