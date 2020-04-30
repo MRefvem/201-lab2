@@ -12,30 +12,32 @@ var correctAnswer = 0
 
 // Question 1: Do I play Classical Piano?
 
-var piano = prompt('Do I play Classical Piano?');
+function classicalPiano() {
+  var piano = prompt('Do I play Classical Piano?');
 
-if(piano.toLowerCase() === 'yes'){
-  alert('Correct! I have been playing the piano for 25 years. Some of my favorite composers are Mozart, Liszt, Debussy and Ravel.');
-  correctAnswer ++;
-} else if(piano.toLowerCase() === 'no'){
-  alert('Actually I do! I have been playing Classical Piano ever since I was seven years old and I even made it a career.');
-} else {
-  alert('Please answer with a yes or no');
+  if(piano.toLowerCase() === 'yes'){
+    alert('Correct! I have been playing the piano for 25 years. Some of my favorite composers are Mozart, Liszt, Debussy and Ravel.');
+    correctAnswer ++;
+  } else if(piano.toLowerCase() === 'no'){
+    alert('Actually I do! I have been playing Classical Piano ever since I was seven years old and I even made it a career.');
+  } else {
+    alert('Please answer with a yes or no');
+  }
 }
-
 // Question 2: Did I study in New York for my undergrad?
 
-var undergrad = prompt('Did I study in New York for my undergrad?');
+function education() {
+  var undergrad = prompt('Did I study in New York for my undergrad?');
 
-if(undergrad.toLowerCase() === 'yes'){
-  alert('The answer is no! I earned my Bachelors degree from Western Washington University which is in Bellingham, WA, but then earned my Masters degree from Manhattan School of Music in New York City.');
-} else if(undergrad.toLowerCase() === 'no'){
-  alert('Correct! I earned my Bachelors degree from Western Washington University which is in Bellingham, WA, but then earned my Masters degree from Manhattan School of Music in New York City.');
-  correctAnswer ++;
-} else {
-  alert('Please answer with a yes or no');
+  if(undergrad.toLowerCase() === 'yes'){
+    alert('The answer is no! I earned my Bachelors degree from Western Washington University which is in Bellingham, WA, but then earned my Masters degree from Manhattan School of Music in New York City.');
+  } else if(undergrad.toLowerCase() === 'no'){
+    alert('Correct! I earned my Bachelors degree from Western Washington University which is in Bellingham, WA, but then earned my Masters degree from Manhattan School of Music in New York City.');
+    correctAnswer ++;
+  } else {
+    alert('Please answer with a yes or no');
+  }
 }
-
 // Question 3: Piano festival attendance
 
 var festival = prompt('Have I ever attended a piano festival in Paris?');
@@ -126,3 +128,7 @@ if (starterGuess.toLowerCase() === 'bulbasaur') {
 }
 
 alert('Thank you so much for answering the questions ' + userName + '! You got ' + correctAnswer + ' questions correct out of seven. I hope you enjoyed learning a little bit more about me. Continue now and see the rest of my site.');
+
+classicalPiano();
+education();
+
