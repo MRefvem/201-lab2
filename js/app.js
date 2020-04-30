@@ -1,110 +1,122 @@
 'use strict';
 
 // get user name and greeting
-
+ 
 var userName = prompt('Hello! What is your name?');
 
 // console.log('the user name is ' + userName);
 
-alert('Hello ' + userName + '! Welcome to the site. Please take a moment to answer a few important questions. Please answer yes or no only.');
+alert('Hello ' + userName + '! Welcome to my site. My name is Michael and I wanted to take a moment to ask you some questions so you can learn more about me. Answers are yes or no only.');
 
-// question 1 Is cheese delicious?
+var correctAnswer = 0
 
-var cheese = prompt('Is cheese delicious');
+// Question 1: Do I play Classical Piano?
 
-if(cheese.toLowerCase() === 'yes'){
-  alert('You\'ve probably enjoyed some of the best cheeses!');
-} else if(cheese.toLowerCase() === 'no'){
-  alert('That\'s too bad. My guess is that you must have had a bad experience with cheese.');
+var piano = prompt('Do I play Classical Piano?');
+
+if(piano.toLowerCase() === 'yes'){
+  alert('Correct! I have been playing the piano for 25 years. Some of my favorite composers are Mozart, Liszt, Debussy and Ravel.');
+  correctAnswer ++;
+} else if(piano.toLowerCase() === 'no'){
+  alert('Actually I do! I have been playing Classical Piano ever since I was seven years old and I even made it a career.');
 } else {
   alert('Please answer with a yes or no');
 }
 
-// question 2 Do you like hiking?
+// Question 2: Did I study in New York for my undergrad?
 
-var hiker = prompt('Do you enjoy hiking?');
+var undergrad = prompt('Did I study in New York for my undergrad?');
 
-if(hiker.toLowerCase() === 'yes'){
-  alert('Me too! I\'ve been to all sorts of cool places in the Seattle area.');
-} else if(hiker.toLowerCase() === 'no'){
-  alert('Its a great hobby and spending time in nature has so many benefits. You should try it sometime!');
+if(undergrad.toLowerCase() === 'yes'){
+  alert('The answer is no! I earned my Bachelors degree from Western Washington University which is in Bellingham, WA, but then earned my Masters degree from Manhattan School of Music in New York City.');
+} else if(undergrad.toLowerCase() === 'no'){
+  alert('Correct! I earned my Bachelors degree from Western Washington University which is in Bellingham, WA, but then earned my Masters degree from Manhattan School of Music in New York City.');
+  correctAnswer ++;
 } else {
   alert('Please answer with a yes or no');
 }
 
-// question 3 cat person?
+// Question 3: Piano festival attendance
 
-var catPerson = prompt('Are you a cat person?');
+var festival = prompt('Have I ever attended a piano festival in Paris?');
 
-if(catPerson.toLowerCase() === 'yes'){
-  alert('Nice! So am I, but I don\'t have one yet.');
-} else if(catPerson.toLowerCase() === 'no'){
-  alert('Thats fine. Lots of dog fans out there.');
+if(festival.toLowerCase() === 'yes'){
+  alert('That is false. Unfortuantely I haven\'t been to Paris, but would love to go someday. I did however attend a piano festival in Prague in 2013, which was an amazing experience.');
+} else if(festival.toLowerCase() === 'no'){
+  alert('That is correct. While it is unfortunate I haven\'t been to Paris, but would love to go someday. I did however attend a piano festival in Prague in 2013, which was an amazing experience.');
+  correctAnswer ++;
 } else {
   prompt('Please answer with a yes or no');
 }
 
-// question 4 meaning of life?
+// Question 4: Rideshare Driver?
 
-var philosphy = prompt('Does life have a higher meaning?');
+var rideshare = prompt('In addition to my life as a pianist, did I ever make money as a rideshare driver?');
 
-if(philosphy.toLowerCase() === 'yes'){
-  alert('Nice to meet a fellow Philosopher!');
-} else if(philosphy.toLowerCase() === 'no'){
-  alert('Monty Python addresses all of this in The Meaning of Life (1983)');
+if(rideshare.toLowerCase() === 'yes'){
+  alert('That is true. I started driving for Uber in February 2018 and I probably know how to get virtually anywhere in the City of Seattle.');
+  correctAnswer ++;
+} else if(rideshare.toLowerCase() === 'no'){
+  alert('That is incorrect. I started driving for Uber in February 2018 and I probably know how to get virtually anywhere in the City of Seattle.');
 } else {
   prompt('Please answer with a yes or no');
 }
 
-// question 5 Play an Instrument?
+// Question 5: Favorite destination?
 
-var playInstrument = prompt('Do you play any musical instruments?');
+var destination = prompt('Is Tokyo my favorite city I\'ve visited?');
 
-if(playInstrument.toLowerCase() === 'yes'){
-  alert('That\'s so cool! I\'ve played the piano for 25 years.');
-} else if(playInstrument.toLowerCase() === 'no'){
-  alert('You\'re never too old to start learning!');
+if(destination.toLowerCase() === 'yes'){
+  alert('That\'s true! I took my first ever trip to Asia in the summer of 2019 when I visited Japan and it was amazing. I really hope I can go back someday.');
+  correctAnswer ++;
+} else if(destination.toLowerCase() === 'no'){
+  alert('Actually it is! I took my first ever trip to Asia in the summer of 2019 when I visited Japan and it was amazing. I really hope I can go back someday.');
 } else {
   prompt('Please answer with a yes or no');
 }
 
 
-// question 6 Number guessing game
-// Guess a number between 1 and 20 (answer is 12)
+// Question 6: Number guessing game
+// Guess a number between 1 and 10 (answer is 7)
 
-var correctAnswer = 12
+var correctNumber = 7
 for(var i = 0; i < 4; i = i + 1){
-  var numberGuess = prompt('Now I would like to play a little number game. Please guess a number between 1 and 20. You have four guesses!')
-  if (numberGuess == correctAnswer) {
+  var numberGuess = prompt('Now I would like to play a little number game. Please guess a number between 1 and 10. You have four guesses!')
+  if (numberGuess == correctNumber) {
     alert('That is correct! Great Work!');
+    correctAnswer ++;
     break;
-  } else if(numberGuess < correctAnswer) {
+  } else if(numberGuess < correctNumber) {
     alert('Sorry! That number is too low. Try a higher number.');
-  } else if(numberGuess > correctAnswer) {
+  } else if(numberGuess > correctNumber) {
     alert('Sorry! That number is too high. Try a lower number.');
   }
   if (i == '3') {
-    alert('I\'m sorry but that\'s the final guess. The correct answer was 12.');
+    alert('I\'m sorry but that\'s the final guess. The correct answer was 7.');
   }
 }
 
-//question 7 Pokemon question. Name one of the Kanto Starters (one of the original starter Pokemon from the original Pokemon Red, Green, Blue, Yellow games)
+//Question 7: Pokemon question. Name one of the Kanto Starters (one of the original starter Pokemon from the original Pokemon Red, Green, Blue, Yellow games)
 
 var kantoStarter = ['bulbasaur', 'charmander', 'squirtle', 'pikachu'];
 
 for(var i = 0; i < 6; i++){
-  var starterGuess = prompt('Now let\'s play one more game! Can you tell me the name of one of the original starter Pokemon from the original Red, Green, Blue, or Yellow Version Pokemon games? You have six tries to get the right answer.');
+  var starterGuess = prompt('Now let\'s play one more game and this one just for fun! Can you tell me the name of one of the starter Pokemon from the original Red, Green, Blue, or Yellow Version Pokemon games? You have six tries to get the right answer.');
 if (starterGuess.toLowerCase() === 'bulbasaur') {
   alert('Correct! The three original starter Pokemon from the Kanto region are Bulbasaur, Charmander and Squirtle. Pikachu was also a starter option in Pokemon Yellow Version');
+  correctAnswer ++;
   break;
 } else if (starterGuess.toLowerCase() === 'charmander') {
   alert('Correct! The three original starter Pokemon from the Kanto region are Bulbasaur, Charmander and Squirtle. Pikachu was also a starter option in Pokemon Yellow Version');
+  correctAnswer ++;
   break;
 } else if (starterGuess.toLowerCase() === 'squirtle') {
   alert('Correct! The three original starter Pokemon from the Kanto region are Bulbasaur, Charmander and Squirtle. Pikachu was also a starter option in Pokemon Yellow Version');
+  correctAnswer ++;
   break;
 } else if (starterGuess.toLowerCase() === 'pikachu') {
   alert('Correct! The three original starter Pokemon from the Kanto region are Bulbasaur, Charmander and Squirtle. Pikachu was also a starter option in Pokemon Yellow Version');
+  correctAnswer ++;
   break;
 } else {
   alert('Sorry, please try again! Remember starter Pokemon always are either Grass, Fire or Water types.');
@@ -113,4 +125,4 @@ if (starterGuess.toLowerCase() === 'bulbasaur') {
 }
 }
 
-alert('Thank you so much for answering the questions ' + userName + '! It was nice to meet you. Continue now to learn a little bit about me on the rest of the site.');
+alert('Thank you so much for answering the questions ' + userName + '! You got ' + correctAnswer + ' questions correct out of seven. I hope you enjoyed learning a little bit more about me. Continue now and see the rest of my site.');
