@@ -12,117 +12,136 @@ var correctAnswer = 0
 
 // Question 1: Do I play Classical Piano?
 
-var piano = prompt('Do I play Classical Piano?');
+function classicalPiano() {
+  var piano = prompt('Do I play Classical Piano?');
 
-if(piano.toLowerCase() === 'yes'){
-  alert('Correct! I have been playing the piano for 25 years. Some of my favorite composers are Mozart, Liszt, Debussy and Ravel.');
-  correctAnswer ++;
-} else if(piano.toLowerCase() === 'no'){
-  alert('Actually I do! I have been playing Classical Piano ever since I was seven years old and I even made it a career.');
-} else {
-  alert('Please answer with a yes or no');
+  if(piano.toLowerCase() === 'yes'){
+    alert('Correct! I have been playing the piano for 25 years. Some of my favorite composers are Mozart, Liszt, Debussy and Ravel.');
+    correctAnswer ++;
+  } else if(piano.toLowerCase() === 'no'){
+    alert('Actually I do! I have been playing Classical Piano ever since I was seven years old and I even made it a career.');
+  } else {
+    alert('Please answer with a yes or no');
+  }
 }
-
 // Question 2: Did I study in New York for my undergrad?
 
-var undergrad = prompt('Did I study in New York for my undergrad?');
+function education() {
+  var undergrad = prompt('Did I study in New York for my undergrad?');
 
-if(undergrad.toLowerCase() === 'yes'){
-  alert('The answer is no! I earned my Bachelors degree from Western Washington University which is in Bellingham, WA, but then earned my Masters degree from Manhattan School of Music in New York City.');
-} else if(undergrad.toLowerCase() === 'no'){
-  alert('Correct! I earned my Bachelors degree from Western Washington University which is in Bellingham, WA, but then earned my Masters degree from Manhattan School of Music in New York City.');
-  correctAnswer ++;
-} else {
-  alert('Please answer with a yes or no');
+  if(undergrad.toLowerCase() === 'yes'){
+    alert('The answer is no! I earned my Bachelors degree from Western Washington University which is in Bellingham, WA, but then earned my Masters degree from Manhattan School of Music in New York City.');
+  } else if(undergrad.toLowerCase() === 'no'){
+    alert('Correct! I earned my Bachelors degree from Western Washington University which is in Bellingham, WA, but then earned my Masters degree from Manhattan School of Music in New York City.');
+    correctAnswer ++;
+  } else {
+    alert('Please answer with a yes or no');
+  }
 }
-
 // Question 3: Piano festival attendance
 
-var festival = prompt('Have I ever attended a piano festival in Paris?');
+function paris() {
+  var festival = prompt('Have I ever attended a piano festival in Paris?');
 
-if(festival.toLowerCase() === 'yes'){
-  alert('That is false. Unfortuantely I haven\'t been to Paris, but would love to go someday. I did however attend a piano festival in Prague in 2013, which was an amazing experience.');
-} else if(festival.toLowerCase() === 'no'){
-  alert('That is correct. While it is unfortunate I haven\'t been to Paris, but would love to go someday. I did however attend a piano festival in Prague in 2013, which was an amazing experience.');
-  correctAnswer ++;
-} else {
-  prompt('Please answer with a yes or no');
+  if(festival.toLowerCase() === 'yes'){
+    alert('That is false. Unfortuantely I haven\'t been to Paris, but would love to go someday. I did however attend a piano festival in Prague in 2013, which was an amazing experience.');
+  } else if(festival.toLowerCase() === 'no'){
+    alert('That is correct. While it is unfortunate I haven\'t been to Paris, but would love to go someday. I did however attend a piano festival in Prague in 2013, which was an amazing experience.');
+    correctAnswer ++;
+  } else {
+    prompt('Please answer with a yes or no');
+  }
 }
-
 // Question 4: Rideshare Driver?
 
-var rideshare = prompt('In addition to my life as a pianist, did I ever make money as a rideshare driver?');
+function uber(){
+  var rideshare = prompt('In addition to my life as a pianist, did I ever make money as a rideshare driver?');
 
-if(rideshare.toLowerCase() === 'yes'){
-  alert('That is true. I started driving for Uber in February 2018 and I probably know how to get virtually anywhere in the City of Seattle.');
-  correctAnswer ++;
-} else if(rideshare.toLowerCase() === 'no'){
-  alert('That is incorrect. I started driving for Uber in February 2018 and I probably know how to get virtually anywhere in the City of Seattle.');
-} else {
-  prompt('Please answer with a yes or no');
+  if(rideshare.toLowerCase() === 'yes'){
+    alert('That is true. I started driving for Uber in February 2018 and I probably know how to get virtually anywhere in the City of Seattle.');
+    correctAnswer ++;
+  } else if(rideshare.toLowerCase() === 'no'){
+    alert('That is incorrect. I started driving for Uber in February 2018 and I probably know how to get virtually anywhere in the City of Seattle.');
+  } else {
+    prompt('Please answer with a yes or no');
+  }
 }
 
 // Question 5: Favorite destination?
 
-var destination = prompt('Is Tokyo my favorite city I\'ve visited?');
+function asia() {
+  var destination = prompt('Is Tokyo my favorite city I\'ve visited?');
 
-if(destination.toLowerCase() === 'yes'){
-  alert('That\'s true! I took my first ever trip to Asia in the summer of 2019 when I visited Japan and it was amazing. I really hope I can go back someday.');
-  correctAnswer ++;
-} else if(destination.toLowerCase() === 'no'){
-  alert('Actually it is! I took my first ever trip to Asia in the summer of 2019 when I visited Japan and it was amazing. I really hope I can go back someday.');
-} else {
-  prompt('Please answer with a yes or no');
+  if(destination.toLowerCase() === 'yes'){
+    alert('That\'s true! I took my first ever trip to Asia in the summer of 2019 when I visited Japan and it was amazing. I really hope I can go back someday.');
+    correctAnswer ++;
+  } else if(destination.toLowerCase() === 'no'){
+    alert('Actually it is! I took my first ever trip to Asia in the summer of 2019 when I visited Japan and it was amazing. I really hope I can go back someday.');
+  } else {
+    prompt('Please answer with a yes or no');
+  }
 }
-
 
 // Question 6: Number guessing game
 // Guess a number between 1 and 10 (answer is 7)
 
-var correctNumber = 7
-for(var i = 0; i < 4; i = i + 1){
-  var numberGuess = prompt('Now I would like to play a little number game. Please guess a number between 1 and 10. You have four guesses!')
-  if (numberGuess == correctNumber) {
-    alert('That is correct! Great Work!');
-    correctAnswer ++;
-    break;
-  } else if(numberGuess < correctNumber) {
-    alert('Sorry! That number is too low. Try a higher number.');
-  } else if(numberGuess > correctNumber) {
-    alert('Sorry! That number is too high. Try a lower number.');
-  }
-  if (i == '3') {
-    alert('I\'m sorry but that\'s the final guess. The correct answer was 7.');
+function numberGame() {
+  var correctNumber = 7
+  for(var i = 0; i < 4; i = i + 1){
+    var numberGuess = prompt('Now I would like to play a little number game. Please guess a number between 1 and 10. You have four guesses!')
+    if (numberGuess == correctNumber) {
+      alert('That is correct! Great Work!');
+      correctAnswer ++;
+      break;
+    } else if(numberGuess < correctNumber) {
+      alert('Sorry! That number is too low. Try a higher number.');
+    } else if(numberGuess > correctNumber) {
+      alert('Sorry! That number is too high. Try a lower number.');
+    }
+    if (i == '3') {
+      alert('I\'m sorry but that\'s the final guess. The correct answer was 7.');
+    }
   }
 }
 
 //Question 7: Pokemon question. Name one of the Kanto Starters (one of the original starter Pokemon from the original Pokemon Red, Green, Blue, Yellow games)
 
-var kantoStarter = ['bulbasaur', 'charmander', 'squirtle', 'pikachu'];
+function pokemonQuestion() {
+  var kantoStarter = ['bulbasaur', 'charmander', 'squirtle', 'pikachu'];
 
-for(var i = 0; i < 6; i++){
-  var starterGuess = prompt('Now let\'s play one more game and this one just for fun! Can you tell me the name of one of the starter Pokemon from the original Red, Green, Blue, or Yellow Version Pokemon games? You have six tries to get the right answer.');
-if (starterGuess.toLowerCase() === 'bulbasaur') {
-  alert('Correct! The three original starter Pokemon from the Kanto region are Bulbasaur, Charmander and Squirtle. Pikachu was also a starter option in Pokemon Yellow Version');
-  correctAnswer ++;
-  break;
-} else if (starterGuess.toLowerCase() === 'charmander') {
-  alert('Correct! The three original starter Pokemon from the Kanto region are Bulbasaur, Charmander and Squirtle. Pikachu was also a starter option in Pokemon Yellow Version');
-  correctAnswer ++;
-  break;
-} else if (starterGuess.toLowerCase() === 'squirtle') {
-  alert('Correct! The three original starter Pokemon from the Kanto region are Bulbasaur, Charmander and Squirtle. Pikachu was also a starter option in Pokemon Yellow Version');
-  correctAnswer ++;
-  break;
-} else if (starterGuess.toLowerCase() === 'pikachu') {
-  alert('Correct! The three original starter Pokemon from the Kanto region are Bulbasaur, Charmander and Squirtle. Pikachu was also a starter option in Pokemon Yellow Version');
-  correctAnswer ++;
-  break;
-} else {
-  alert('Sorry, please try again! Remember starter Pokemon always are either Grass, Fire or Water types.');
-} if (i == '5') {
-  alert('Sorry! The correct answers were Bulbasaur, Charmander and Squirtle, but Pikachu is also accemptable because it was the starter Pokemon from Yellow Version.')
+  for(var i = 0; i < 6; i++){
+    var starterGuess = prompt('Now let\'s play one more game and this one just for fun! Can you tell me the name of one of the starter Pokemon from the original Red, Green, Blue, or Yellow Version Pokemon games? You have six tries to get the right answer.');
+  if (starterGuess.toLowerCase() === 'bulbasaur') {
+    alert('Correct! The three original starter Pokemon from the Kanto region are Bulbasaur, Charmander and Squirtle. Pikachu was also a starter option in Pokemon Yellow Version');
+    correctAnswer ++;
+    break;
+  } else if (starterGuess.toLowerCase() === 'charmander') {
+    alert('Correct! The three original starter Pokemon from the Kanto region are Bulbasaur, Charmander and Squirtle. Pikachu was also a starter option in Pokemon Yellow Version');
+    correctAnswer ++;
+    break;
+  } else if (starterGuess.toLowerCase() === 'squirtle') {
+    alert('Correct! The three original starter Pokemon from the Kanto region are Bulbasaur, Charmander and Squirtle. Pikachu was also a starter option in Pokemon Yellow Version');
+    correctAnswer ++;
+    break;
+  } else if (starterGuess.toLowerCase() === 'pikachu') {
+    alert('Correct! The three original starter Pokemon from the Kanto region are Bulbasaur, Charmander and Squirtle. Pikachu was also a starter option in Pokemon Yellow Version');
+    correctAnswer ++;
+    break;
+  } else {
+    alert('Sorry, please try again! Remember starter Pokemon always are either Grass, Fire or Water types.');
+  } if (i == '5') {
+    alert('Sorry! The correct answers were Bulbasaur, Charmander and Squirtle, but Pikachu is also accemptable because it was the starter Pokemon from Yellow Version.')
+  }
+  }
 }
-}
+
+
+classicalPiano();
+education();
+paris();
+uber();
+asia();
+numberGame();
+pokemonQuestion();
 
 alert('Thank you so much for answering the questions ' + userName + '! You got ' + correctAnswer + ' questions correct out of seven. I hope you enjoyed learning a little bit more about me. Continue now and see the rest of my site.');
